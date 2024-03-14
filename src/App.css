@@ -1,0 +1,41 @@
+:root {
+  --sheet-Bdr-width: 1.5px;
+  --sheet-Row-Width: 50p;
+}
+
+.SheetCell,
+.SheetCell-Title {
+  min-width: 100px;
+  height: 30px;
+  border: 1px solid #ccc;
+  padding: 5px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.rowIdx {
+  width: var(--sheet-Row-Width);
+}
+
+.SheetCell-Title :first-child {
+  margin-left: var(--sheet-Row-Width);
+  font-weight: bold;
+}
+
+.SheetCell:focus,
+.selected {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
+}
+
+.SheetRow {
+  display: flex;
+}
+
+.SheetCell:hover {
+  border: var(--sheet-Bdr-width) solid blue;
+}
